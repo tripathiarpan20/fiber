@@ -11,7 +11,7 @@ def _get_chain_endpoint(subtensor_network: str | None, subtensor_address: str | 
     if subtensor_network is None and subtensor_address is None:
         raise ValueError("subtensor_network and subtensor_address cannot both be None")
 
-    if subtensor_address is not None:
+    if subtensor_address:
         logger.info(f"Using chain address: {subtensor_address}")
         return subtensor_address
 
